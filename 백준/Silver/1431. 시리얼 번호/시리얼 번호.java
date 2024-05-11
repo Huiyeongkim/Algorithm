@@ -12,42 +12,33 @@ class Main {
         for (int i = 0; i < N; i++) {
             arr[i] = br.readLine();
         }
-        for (int i = 0; i < N; i++) {
-            for (int j = i+1; j < N; j++) {
-                if (arr[j].length() < arr[i].length()) {
-                    String temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
-                }
-                if (arr[j].length() == arr[i].length()) {
-                    int sum1 = 0;
-                    int sum2 = 0;
 
-                    for (int k = 0; k < arr[i].length(); k++) {
-                        if (arr[i].charAt(k) >= '0' && arr[i].charAt(k) <= '9') {
-                            sum1 += arr[i].charAt(k)-'0';
-                        }
-                        if (arr[j].charAt(k) >= '0' && arr[j].charAt(k) <= '9') {
-                            sum2 += arr[j].charAt(k)-'0';
-                        }
+        Arrays.sort(arr, (o1, o2) -> {
+            if (o1.length() != o2.length()) {
+                return o1.length() - o2.length();
+            } else {
+                int sum1 = 0;
+                int sum2 = 0;
+
+                for (int k = 0; k < o1.length(); k++) {
+                    if (o1.charAt(k) >= '0' && o1.charAt(k) <= '9') {
+                        sum1 += o1.charAt(k) - '0';
                     }
-                    if (sum1 > sum2) {
-                        String temp = arr[j];
-                        arr[j] = arr[i];
-                        arr[i] = temp;
+                    if (o2.charAt(k) >= '0' && o2.charAt(k) <= '9') {
+                        sum2 += o2.charAt(k) - '0';
                     }
-                    else if (sum1 == sum2) {
-                        if (arr[i].compareTo(arr[j]) > 0) {
-                            String temp = arr[j];
-                            arr[j] = arr[i];
-                            arr[i] = temp;
-                        }
-                    }
+                }
+
+                if (sum1 != sum2) {
+                    return sum1 - sum2;
+                } else {
+                    return o1.compareTo(o2);
                 }
             }
-        }
+        });
 
-        for (String array : arr)
-           System.out.println(array);
+        for (String array : arr) {
+            System.out.println(array);
+        }
     }
 }
