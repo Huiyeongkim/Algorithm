@@ -20,8 +20,8 @@ public class Main {
             }
         }
 
-        long maxKey = Long.MAX_VALUE;
-        int maxValue = Integer.MIN_VALUE;
+        long maxKey = 0;
+        int maxValue = 0;
         for (Map.Entry<Long, Integer> entry : map.entrySet()) {
             long key = entry.getKey();
             int value = entry.getValue();
