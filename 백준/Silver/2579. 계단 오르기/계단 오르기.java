@@ -4,14 +4,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        int n = scanner.nextInt(); // 계단의 개수
+        int n = scanner.nextInt();
         
-        int[] score = new int[n+1]; // 계단의 점수를 저장할 배열
+        int[] score = new int[n+1];
         for (int i = 1; i <= n; i++) {
             score[i] = scanner.nextInt();
         }
         
-        int[] dp = new int[n+1]; // 최대 점수를 저장할 배열
+        int[] dp = new int[n+1]; 
         
         if (n >= 1) {
             dp[1] = score[1];
