@@ -10,7 +10,7 @@ public class Main {
             int a = in.nextInt();
             arr[i] = a;
         }
-        Arrays.sort(arr); //오름차순 정렬
+        Arrays.sort(arr);
         int b=0;
         for (int i=0; i<N; i++) {
             b += arr[i];
