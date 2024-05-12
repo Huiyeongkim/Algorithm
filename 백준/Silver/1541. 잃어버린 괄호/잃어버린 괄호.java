@@ -12,10 +12,10 @@ public class Main {
 			String[] add = str[i].split("\\+");
 			
 			for(int j = 0; j < add.length; j++) 
-                temp += Integer.parseInt(add[j]);
+                		temp += Integer.parseInt(add[j]);
 			
 			if (sum == Integer.MAX_VALUE) sum = temp; 
-            else sum -= temp;
+            		else sum -= temp;
 		}
 		System.out.println(sum);
 	}
