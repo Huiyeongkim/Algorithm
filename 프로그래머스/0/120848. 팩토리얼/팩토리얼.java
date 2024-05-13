@@ -13,7 +13,6 @@ class Solution {
                 answer = i-1;
                 break;
             }
-            if (n>k)
             i++;
         }
         return answer;
