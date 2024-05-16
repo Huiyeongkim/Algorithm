@@ -4,6 +4,6 @@ class Solution {
         char temp = answer[num1];
         answer[num1] = answer[num2];
         answer[num2] = temp;
-        return new String(answer);
+        return String.valueOf(answer);
     }
 }
