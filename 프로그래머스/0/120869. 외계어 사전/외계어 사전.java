@@ -7,7 +7,6 @@ class Solution {
                 if (dic[i].contains(spell[j])) {
                     count++;
                     dic[i].replace(spell[j], "");
-                    System.out.println("dic = " + dic[i]);
                 }
             }
             if (count==spell.length) answer = 1;
