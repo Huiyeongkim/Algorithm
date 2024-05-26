@@ -1,10 +1,11 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int N = in.nextInt();
+class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
         int[] dp = new int[N + 1];
         dp[1] = 0;
 
@@ -15,8 +16,6 @@ public class Main {
             if (i % 3 == 0)
                 dp[i] = Math.min(dp[i], dp[i / 3] + 1);
         }
-
         System.out.println(dp[N]);
-
     }
 }
