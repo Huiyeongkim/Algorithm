@@ -7,8 +7,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-
-        // 기본 입력
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
@@ -37,7 +35,7 @@ public class Main {
             for (int neighbor : graph[current]) {
                 if (dist[neighbor] == -1) {
                     dist[neighbor] = dist[current] + 1;
-                    queue.offer(neighbor);
+                    queue.add(neighbor);
                 }
             }
         }
