@@ -5,8 +5,7 @@ import java.util.*;
 
 
 public class Main {
-    static int N, M, K;
-    static int count;
+
     static boolean[] visited;
     static int[] arr;
     static List<Integer>[] tree;
