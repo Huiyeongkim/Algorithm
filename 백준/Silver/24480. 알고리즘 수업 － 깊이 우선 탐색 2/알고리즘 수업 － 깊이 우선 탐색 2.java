@@ -17,9 +17,9 @@ public class Main {
         M = Integer.parseInt(st.nextToken());
         R = Integer.parseInt(st.nextToken());
 
-        arr = new int[N + 1];  // 정점 번호가 1부터 시작하므로 N+1 크기
-        visited = new boolean[N + 1];  // 정점 번호가 1부터 시작하므로 N+1 크기
-        list = new ArrayList[N + 1];  // 정점 번호가 1부터 시작하므로 N+1 크기
+        arr = new int[N + 1];
+        visited = new boolean[N + 1];
+        list = new ArrayList[N + 1]; 
 
         for (int i = 1; i <= N; i++) {
             list[i] = new ArrayList<>();
@@ -45,13 +45,13 @@ public class Main {
         }
     }
 
-    public static void DFS(int node) {
-        visited[node] = true;
-        arr[node] = count++;
+    public static void DFS(int R) {
+        visited[R] = true;
+        arr[R] = count++;
 
-        for (int neighbor : list[node]) {
-            if (!visited[neighbor]) {
-                DFS(neighbor);
+        for (int a : list[R]) {
+            if (!visited[a]) {
+                DFS(a);
             }
         }
     }
