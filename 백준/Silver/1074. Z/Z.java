@@ -16,9 +16,9 @@ public class Main {
 
     public static long Z(int N, int r, int c) {
         int size = (int) Math.pow(2, N);
-        int answer = 0;
+        long answer = 0;
         while (size > 1) {
-            if (r < size/2 && c < size/2) { 
+            if (r < size/2 && c < size/2) {
                 answer += 0;
             } else if (r < size/2 && c >= size/2) {
                 answer += size/2 * size/2;
