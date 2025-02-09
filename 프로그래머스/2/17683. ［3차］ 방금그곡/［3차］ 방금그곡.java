@@ -29,11 +29,11 @@ class Solution {
     }
     
     private String func(String s) {
-        return s.replace("C#", "c")
-                .replace("D#", "d")
-                .replace("F#", "f")
-                .replace("G#", "g")
-                .replace("A#", "a")
-                .replace("B#", "b");
+        return s.replaceAll("C#", "c")
+                .replaceAll("D#", "d")
+                .replaceAll("F#", "f")
+                .replaceAll("G#", "g")
+                .replaceAll("A#", "a")
+                .replaceAll("B#", "b");
     }
 }
