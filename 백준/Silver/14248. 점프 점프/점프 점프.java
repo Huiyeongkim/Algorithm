@@ -32,11 +32,10 @@ class Main {
         System.out.println(answer);
     }
     private static void DFS(int index) {
-        if (visited[index]) return;
         visited[index] = true;
 
         int k = arr[index];
         if (index + k < arr.length) DFS(index + k);
-        if (index - k >= 0) DFS(index - k);
+        if (index - k > 0) DFS(index - k);
     }
 }
