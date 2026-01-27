@@ -37,6 +37,7 @@ public class Main {
             }
         }
 
+        // 결과 출력
         StringBuilder sb = new StringBuilder();
         for (Character ch : left) {
             sb.append(ch);
