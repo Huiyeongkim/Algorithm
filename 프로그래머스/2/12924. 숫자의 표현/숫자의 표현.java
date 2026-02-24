@@ -1,13 +1,16 @@
 class Solution {
     public int solution(int n) {
-        int answer = 0;
-        for (int i=1; i<=n; i++) {
-            int sum = 0;
+        int answer = 1;
+        for (int i=1; i<n; i++) {
             int k = i;
-            while(n>sum) {
-                sum += k;
+            int sum = k;
+            while(sum <= n) {
+                if (sum == n) {
+                    answer++;
+                    break;
+                }
                 k++;
-                if (sum==n) answer++;
+                sum += k;
             }
         }
         return answer;
